@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('AWS Credentials') {
       steps {
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AKIA3IJZLHT2HFBPS6PF', credentialsId: 'aws-static', secretKeyVariable: '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']]) {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws-static', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
         sh """  
                mkdir -p ~/.aws
                echo "[default]" >~/.aws/credentials
