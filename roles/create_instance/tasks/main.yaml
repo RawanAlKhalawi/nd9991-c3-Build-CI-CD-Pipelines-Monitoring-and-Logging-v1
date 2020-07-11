@@ -16,11 +16,11 @@
   ec2:
     key_name: Jenkins-demo
     instance_type: t2.nano
-    image: ami-0ac80df6eff0e70b5
+    image: ami-0a63f96e85105c6d3
     user_data: "{{ USERDATA }}"
     region: us-east-2
     group_id:
-      - sg-08bf10b9c69235a20
+      - sg-07e7febb0a51f598b
     wait: yes
     instance_tags:
       Name: web_server
